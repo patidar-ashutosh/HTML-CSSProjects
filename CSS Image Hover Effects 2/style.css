@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,700;);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #212121;
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.container .box{
+    overflow: hidden;
+    position: relative;
+    max-width: 400px;
+    min-width: 300px;
+    height: 300px;
+}
+
+.box img{
+    height: 100%;
+    width: 100%;
+}
+
+.box:hover img{
+    opacity: 0.7;
+}
+
+.box .overlap{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    line-height: 1.1em;
+    z-index: 2;
+}
+
+.box:hover .overlap{
+    opacity: 1;
+}
+
+.box .overlap h3{
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.box .overlap h3 span {
+    display: block;
+    font-weight: 700;
+}
+
+.box::before, .box::after{
+    content: "";
+    background-color: rgba(46, 52, 64, 0.6);
+    border-top: 50px solid rgba(46, 52, 64, 0.8);
+    border-bottom: 50px solid rgba(46, 52, 64, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.box:before {
+    transform: scaleY(2);
+}
+  
+.box:after {
+    transform: scaleY(2);
+}
+
+.box:hover:before,
+.box.hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
