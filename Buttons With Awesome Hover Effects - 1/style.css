@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: azure;
+}
+
+.button{
+    border: 1px solid #3498db;
+    padding: 10px 20px;
+    min-width: 130px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    transition: 0.8s;
+    color: #3498db;
+    position: relative;
+}
+
+.button:hover{
+    color: white;
+    transition: 0.8s;
+}
+
+.button1::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: #3498db;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: 0.8s;
+}
+.button1:hover::before{
+    width: 100%;
+}
+
+.button2::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: #3498db;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transition: 0.8s;
+}
+.button2:hover::before{
+    width: 100%;
+}
+
+.button3::before{
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: #3498db;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transition: 0.8s;
+}
+.button3:hover::before{
+    height: 100%;
+}
+
+.button4::before{
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: #3498db;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    transition: 0.8s;
+}
+.button4:hover::before{
+    height: 100%;
+}
