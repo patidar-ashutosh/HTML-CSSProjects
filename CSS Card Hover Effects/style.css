@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #353540;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+    padding: 30px;
+}
+
+.container img{
+    height: 400px;
+    width: 300px;
+}
+
+.container img:hover{
+    transition: 0.5s;
+    transform: perspective(1000px) rotateX(7deg) translateY(-6px);
+    box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+}
