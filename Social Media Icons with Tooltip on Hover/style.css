@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 2rem;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.icon{
+    background-color: white;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon .tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 5px; 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+}
+
+.icon:hover .tooltip{
+  top: -45px;
+  opacity: 1;
+}
+
+.icon .tooltip::before{
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    bottom: -3px;
+    background-color: red;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#facebook::before{
+    position: absolute;
+    font-size: 14px;
+
+}
+
+#facebook:hover,
+#facebook:hover .tooltip,
+#facebook:hover .tooltip::before{
+    background-color: #3b5999;
+    color: #ffffff;
+}
+
+#twitter:hover,
+#twitter:hover .tooltip,
+#twitter:hover .tooltip::before{
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+
+#instagram:hover,
+#instagram:hover .tooltip,
+#instagram:hover .tooltip::before{
+    background-color: #e1306c;
+    color: #ffffff;
+}
+
+#github:hover,
+#github:hover .tooltip,
+#github:hover .tooltip::before{
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#youtube:hover,
+#youtube:hover .tooltip,
+#youtube:hover .tooltip::before{
+    background-color: #de463b;
+    color: #ffffff;  
+}
