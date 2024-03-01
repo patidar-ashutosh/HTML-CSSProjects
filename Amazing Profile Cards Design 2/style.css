@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #212121;
+    font-family: 'Open Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box{
+    min-width: 230px;
+    max-width: 315px;
+    color: #141414;
+    border: 2px solid cyan;
+}
+
+/* upper-section css start */
+.upper-section{
+    background-color: #333333;
+    color: #fff;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.upper-section h3 {
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 5px;
+}
+
+.upper-section h4 {
+    color: #8c8c8c;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.upper-section p {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.upper-section::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #333333;
+    left: 10%;
+    bottom: -2%;
+    transform: rotate(230deg);
+}
+/* upper-section css end */
+
+/* down-section css start */
+.down-section{
+    display: flex;
+}
+
+.down-section img{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 80px;
+}
+.down-section .icons{
+    display: flex;
+    gap: 20px;
+    padding: 20px 90px;
+    padding-left: 10px;
+}
+
+.down-section .icons i{
+    padding: 10px 2px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.down-section .icons i:hover{
+    opacity: 1;
+    color: red;
+}
+/* down-section css end */
