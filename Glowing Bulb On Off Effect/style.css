@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #111;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box{
+    height: 450px;
+    width: 450px;
+    position: relative;
+    top: -70px;
+}
+
+input[type='checkbox']{
+    display: none;
+}
+
+label{
+    height: 50px;
+    width: 180px;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    left: 50%;
+    bottom: -20%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+#turn-off{
+    opacity: 0;
+    color: white;
+}
+
+#turn-off:hover{
+    color: black;
+    background-color: #fff;
+}
+
+#turn-on{
+    background-color: #fff;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#on-image{
+    opacity: 0;
+}
+
+input:checked ~ #on-image{
+    opacity: 1;
+    animation-name: glowing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+input:checked ~ #turn-off{
+    opacity: 1;
+}
+
+input:checked ~ #turn-on{
+    opacity: 0;
+}
+
+@media (max-width:450px){
+    .image-box{
+        height: 300px;
+        width: 300px;
+        top: -65px;
+    }
+
+    label{
+        bottom: -30%;
+    }
+}
+
+@keyframes glowing{
+    0%{
+        opacity: 1;
+    }
+    5%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    74%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    84%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
